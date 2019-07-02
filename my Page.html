@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script src="./Script/jquery.min.js"></script>
+<script src="./Script/bootstrap.min.js"></script>
+<link href="./Stylesheet/bootstrap.min.css" rel="stylesheet"></link>
+<link href="./Stylesheet/bootstrap.css"></link>
+<script src="./Script/my.js"></script>
+<script src="./Script/table.js"></script>
+<script src="./Script/photo.js"></script>
+ 
+ <script>
+  $(document).ready(function(){
+  
+  console.log()
+  });
+  </script>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MyPage</title>
+    <style>
+    body {
+        padding-top: 70px;
+        background-image: url("./img/15.jpg");
+      position: relative;
+      background-size: cover;
+      top:-20px;
+      left:-20px;
+      right:-40px;
+      bottom: -40px;
+      width:auto;
+      height: auto;
+           }
+    #FirstName,#MiddleName,#LastName{
+           margin-right:20px;
+    }
+    #DOB,#Father,#Mother{
+           margin-right:20px;
+    }
+    #Tex,#Rex{
+           margin-right:20px;
+    }
+    #ExpectedCTC,#CurrentCTC{
+           margin-right:20px;
+    }
+     
+    #ResignedFlag,#CurrentCompany{
+           margin-right:30px;
+    }
+    #LastWorkingDays,#FunctionalDomin{
+           margin-right:30px;
+    }
+    #PrimaryOccupation,#UniversityInstitute{
+           margin-right:30px;
+    }
+    label {
+   
+    clear:left;
+    
+    padding-right:10px;
+}
+    #text{
+           margin-right:20px;
+    }
+    .othertop{margin-top:10px;}
+    form label{
+  font-weight:bold;
+}
+input{
+
+
+margin-bottom:5px; 
+}
+
+
+    </style>
+
+</head>
+
+<body>
+  <div class="container">
+<legend>Personal Information</legend>
+
+<!-- Text input-->
+
+<form class="form-inline"  >
+  
+
+<div class="form-group">
+<label for="First Name">First Name:</label>
+    <input type="First Name" class="form-control" id="FirstName" placeholder="Enter Your First Name" name="First Name" required>
+  </div>
+  
+  
+<div class="form-group">
+  <label for="Middle Name">Middle Name:</label>
+    <input type="Middle Name" class="form-control" id="MiddleName" placeholder="Enter Your Middle Name" name="Middle Name">
+  </div>
+  
+<div class="form-group">
+  <label for="Last Name">Last Name:</label>
+    <input type="text" class="form-control" id="LastName" placeholder="Enter Your Last Name" name="Last Name">
+</div>
+
+
+</form>
+<br />
+<form class="form-inline"  >
+  
+    <div class="form-group">
+        <label for="DOB">Date Of Birth:</label>
+          <input type="date" class="form-control" id="DOB" placeholder="Enter Your  DOB" name="DOB" required>
+        </div>
+
+    <div class="form-group">
+    <label for="Father Name">Father Name:</label>
+        <input type="text" class="form-control" id="Father" placeholder="Enter Father Name" name="Father Name" required>
+      </div>
+      
+      
+    
+      
+      <div class="form-group">
+        <label for="Mother Name">Mother Name:</label>
+          <input type="text" class="form-control" id="Mother" placeholder="Enter Mother Name" name="Mother Name" required>
+        </div>
+    
+    
+    </form>
+    <br />
+
+<!-- File Button --> 
+<div class="form-group">
+  <label class="control-label" for="Upload photo" aria-required="true">Upload photo:</label>
+  <input id=Uploadphoto type="file"  onchange="previewFile()"><br>
+  <img src="" height="100" alt="Image preview...">
+  
+</div>
+
+
+
+
+
+  
+
+  
+    <form class="form-inline" ></form>
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Gender" aria-required="true">Gender</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="Gender-0">
+      <input type="radio" name="Gender" id="Gender-0" value="1" >
+      Male
+    </label> 
+    <label class="radio-inline" for="Gender-1">
+      <input type="radio" name="Gender" id="Gender-1" value="2">
+      Female
+    </label> 
+    <label class="radio-inline" for="Gender-2">
+      <input type="radio" name="Gender" id="Gender-2" value="3">
+      Other
+    </label>
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="radios" aria-required="true">Marital Status:</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="radios-0">
+      <input type="radio" name="radios" id="radios-0" value="1">
+      Married
+    </label> 
+    <label class="radio-inline" for="radios-1">
+      <input type="radio" name="radios" id="radios-1" value="2">
+      Unmarried
+    </label>
+  </div>
+</div>
+</form>
+<form class="form-inline"  >
+<div class="form-group">
+  <label class="col-md-4 control-label col-xs-12" for="Permanent Address">Permanent Address</label>  
+  <div class="col-md-2  col-xs-4">
+  <input id="District" name="Permanent Address" required  type="text" placeholder="District" class="form-control input-md ">
+  </div>
+</br>
+  <div class="col-md-2 col-xs-4">
+
+  <input id="Area" name="Permanent Address" required type="text" placeholder="Area" class="form-control input-md ">
+  </div>
+
+  
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Permanent Address"></label>  
+  <div class="col-md-2  col-xs-4">
+  <input id="Street" name="Permanent Address" required  type="text" placeholder="Street" class="form-control input-md ">
+  
+  </div>
+
+  
+
+  
+</div>
+
+
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label col-xs-12" for="Temporary Address">Temporary Address</label>  
+  <div class="col-md-2  col-xs-4">
+  <input id="District1" name="Temporary Address" type="text" placeholder="District" class="form-control input-md ">
+  </div>
+  
+  <div class="col-md-2 col-xs-4">
+
+  <input id="Area1" name="Temporary Address" type="text" placeholder="Area" class="form-control input-md ">
+  </div>
+
+  
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Temporary Address"></label>  
+  <div class="col-md-2  col-xs-4">
+  <input id="Street1" name="Temporary Address" type="text" placeholder="Street" class="form-control input-md ">
+  
+  </div>
+
+  
+
+  
+</div>
+</form>
+  
+  <!-- Form Name -->
+  <legend>Technical Information</legend>
+
+  <div class="container" >
+    <div class="row">  
+               
+  <table class="table table-bordered"  id="mytable" margin-right="180x">
+    <thead>
+      <tr>
+        <th>Skills</th>
+        <th>Experience</th>
+        <th>Certified</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>  <input type="text" class="form-control" id="usr1" placeholder="skills 1"></td>
+        <td>  <input type="number" class="form-control" id="usr2" placeholder="years"></td>
+        <td>  <input type="text" class="form-control" id="usr3" placeholder="yes or no"></td>
+      </tr>
+      <tr>
+        <td>  <input type="text" class="form-control" id="usr4" placeholder="skills 2"></td>
+        <td>  <input type="number" class="form-control" id="usr5" placeholder="years"></td>
+        <td>  <input type="text" class="form-control" id="usr6" placeholder="yes or no"></td>
+      </tr>
+      <tr>
+        <td>  <input type="text" class="form-control" id="usr7" placeholder="skills 3"></td>
+        <td>  <input type="number" class="form-control" id="usr8" placeholder="years"></td>
+        <td>  <input type="text" class="form-control" id="usr9" placeholder="yes or no"></td>
+      </tr>
+    </tbody>
+  </table>
+  <button onclick="myFunction()">Add New Skill</button>
+  
+</div>
+
+<!-- Text input-->
+<legend>Educational/Qualification Information</legend>
+<form class="form-inline"  >
+  
+    <div class="form-group">
+        <label for="Primary Occupation">Primary Occupation:</label>
+          <input type="text" class="form-control " id="PrimaryOccupation" placeholder="Enter Primary Occupation" name="Primary Occupation" required>
+        </div>
+
+    <div class="form-group">
+    <label for="University/Institute">University/Institute:</label>
+        <input type="text" class="form-control" id="UniversityInstitute" placeholder="Enter  University/Institute" name="University/Institute" required>
+      </div>
+      </form>
+    <br />
+    <form class="form-inline"  >
+    <div class="form-group">
+        <label for="Current Company">Current Company:</label>
+          <input type="Text" class="form-control" id="CurrentCompany" placeholder="Enter Current Company" name="Current Company">
+        </div>
+    
+        <div class="form-group">
+            <label for="Resigned Flag">Resigned Flag:</label>
+              <input type="Text" class="form-control" id="ResignedFlag" placeholder="Enter Resigned Flag" name="Resigned Flag">
+            </div>
+        </form>
+        <br />
+<form class="form-inline"  >
+<div class="form-group">
+  <label  for="Last Working Day">Last Working Day:</label>  
+     <input type="text" class="form-control" id="LastWorkingDays" placeholder="Last Working Day" name="Last Working Day">
+      </div>
+<div class="form-group">
+  <label for="Functional Domin">Functional Domin:</label>  
+      
+     <input type="text" class="form-control" id="FunctionalDomin" placeholder="Functional Domin" name="Functional Domin" required>
+      </div>
+    </form>
+    <br/>
+    <form class="form-inline"  >
+      <div class="form-group">
+        <label  for="Expected CTC">Expected CTC:</label>  
+           <input type="number" class="form-control" id="ExpectedCTC" placeholder="Expected CTC" name="Expected CTC" required>
+            </div>
+      <div class="form-group">
+        <label for="Current CTC">Current CTC:</label>  
+            
+           <input type="number" class="form-control" id="CurrentCTC" placeholder="Current CTC" name="Current CTC">
+            </div>
+          </form>
+          <br/>
+          <form class="form-inline"  >
+            <div class="form-group">
+              <label  for="Tex">Tex:</label>  
+                 <input type="number" class="form-control" id="Tex" placeholder="Tex" name="Tex">
+                  </div>
+            <div class="form-group">
+              <label for="Rex">Rex:</label>  
+                  
+                 <input type="number" class="form-control" id="Rex" placeholder="Rex" name="Rex">
+                  </div>
+                </form>
+                <br/>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Phone number ">Phone number </label>  
+  <div class="col-md-4">
+  <div class="input-group">
+       <div class="input-group-addon">
+     <i class="fa fa-phone"></i>
+        
+       </div>
+    <input id="Phonenumber1" name="Phone number " type="number" placeholder="Primary Phone number " class="form-control input-md" required>
+    
+      </div>
+      <div class="input-group othertop">
+       <div class="input-group-addon">
+     <i class="fa fa-mobile fa-1x" style="font-size: 20px;"></i>
+        
+       </div>
+    <input id="Phonenumber2" name="Secondary Phone number " type="number" placeholder=" Secondary Phone number " class="form-control input-md" required>
+    
+      </div>
+  
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Email Address">Email Address</label>  
+  <div class="col-md-4">
+  <div class="input-group">
+       <div class="input-group-addon">
+     <i class="fa fa-envelope-o"></i>
+        
+       </div>
+    <input id="EmailAddress" name="Email Address" type="email" placeholder="Email Address" class="form-control input-md" required>
+    
+      </div>
+  
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Availability time">Availability time</label>  
+  <div class="col-md-4">
+  <div class="input-group">
+       <div class="input-group-addon">
+     <i class="fa fa-clock-o"></i>
+        
+       </div>
+    <input id="Availabilitytime" name="Availability time" type="time" placeholder="Availability time" class="form-control input-md" required>
+    
+      </div>
+  
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Available Service Area">Available Service Area</label>  
+  <div class="col-md-4">
+  <div class="input-group">
+       <div class="input-group-addon">
+     <i class="fa fa-street-view"></i>
+        
+       </div>
+   <input id="AvailableServiceArea" name="Available Service Area" type="text" placeholder="Available Service Area" class="form-control input-md" required>
+    
+      </div>
+  
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Languages Known">Languages Known</label>
+  <div class="col-md-4">
+  <div class="checkbox">
+    <label for="Languages Known-0">
+      <input type="checkbox" name="Languages Known" id="LanguagesKnown-0" value="1">
+      English
+    </label>
+    </div>
+  <div class="checkbox">
+    <label for="Languages Known-1">
+      <input type="checkbox" name="Languages Known" id="LanguagesKnown-1" value="2">
+      Hindi
+    </label>
+    </div>
+
+<div class="othertop">
+    <label for="Languages Known-3">
+    
+     
+  
+    </label>
+
+     <input type="input" name="LanguagesKnown" id="LanguagesKnown-3"  placeholder="Other Language">
+    </div>
+    
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Working Experience (time period)">Working Experience (time period)</label>  
+  <div class="col-md-4">
+  <div class="input-group">
+       <div class="input-group-addon">
+     <i class="fa fa-clock-o"></i>
+        
+       </div>
+    <input id="WorkingExperiencetimeperiod" name="Working Experience" type="text" placeholder="Enter time period " class="form-control input-md">
+    
+    
+      </div>
+ 
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Overview (max 200 words)">Overview (max 200 words)</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" rows="10"  id="Overviewmax200words" name="Overview (max 200 words)">Overview</textarea>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" ></label>  
+  <div class="col-md-4">
+  <input type="button" value ="submit" onclick ="load()"/>
+  <input type="button" value ="clear" onclick ="load()"/>
+  
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+</body>
+
+</html>
